@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munhoz Advocacia — Soluções Jurídicas Estratégicas | Sorocaba/SP</title>
+<meta name="description" content="Assessoria jurídica estratégica em Direito Empresarial, Cível, Trabalhista e Antecipação de Recebíveis. Dr. Lucas Munhoz — OAB/SP 432.128 — Sorocaba/SP.">
+<meta name="keywords" content="advogado sorocaba, direito empresarial, assessoria jurídica, Munhoz Advocacia, direito cível, direito trabalhista">
+<meta property="og:title" content="Munhoz Advocacia — Soluções Jurídicas Estratégicas">
+<meta property="og:description" content="Assessoria jurídica estratégica e personalizada em Sorocaba/SP. Direito Empresarial, Cível e Trabalhista.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lucasmunhoz.adv.br">
+<link rel="canonical" href="https://lucasmunhoz.adv.br">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --verde: #0D3D2E;
+    --verde-medio: #1a5c45;
+    --verde-claro: #2a7a5e;
+    --creme: #F2EDE4;
+    --creme-escuro: #E0D8CC;
+    --dourado: #C9A96E;
+    --branco: #FFFFFF;
+    --cinza: #f7f5f2;
+    --texto-escuro: #1a1a1a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--creme);
+    overflow-x: hidden;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    background: var(--verde);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s;
+  }
+
+  .header.scrolled {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: -30px;
+    width: 300px;
+    height: 150px;
+    background: rgba(201, 169, 110, 0.07);
+    transform: rotate(-20deg);
+    border-radius: 50%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    opacity: 0.95;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logo-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--branco);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .logo-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--creme-escuro);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .nav a {
+    color: var(--creme);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    transition: opacity 0.2s, color 0.2s;
+    position: relative;
+  }
+
+  .nav a:hover,
+  .nav a.active {
+    opacity: 1;
+    color: var(--branco);
+  }
+
+  .nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--dourado);
+  }
+
+  .btn-whats-header {
+    background: var(--dourado);
+    color: var(--verde);
+    border: none;
+    padding: 10px 22px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: background 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn-whats-header:hover {
+    background: #d4b77a;
+  }
+
+  .btn-portal-header {
+    background: transparent;
+    color: var(--creme);
+    border: 1px solid var(--dourado);
+    padding: 10px 22px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+    margin-right: 10px;
+  }
+
+  .btn-portal-header:hover {
+    background: var(--dourado);
+    color: var(--verde);
+  }
+
+  .nav-portal {
+    display: none !important;
+  }
+
+  /* Mobile menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--creme);
+    transition: all 0.3s;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--verde);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    margin-top: 72px;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13,61,46,0.95) 40%, rgba(13,61,46,0.5) 100%);
+    z-index: 1;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 50%, rgba(42,122,94,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(201,169,110,0.08) 0%, transparent 50%),
+      var(--verde);
+  }
+
+  .hero-foto-area {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 40px;
+  }
+
+  .hero-foto-placeholder {
+    width: 380px;
+    height: 520px;
+    background: linear-gradient(180deg, transparent 0%, rgba(13,61,46,0.4) 100%);
+    border-top: 1px solid rgba(201,169,110,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-foto-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(20%) contrast(1.05);
+  }
+
+  .hero-foto-sim {
+    width: 340px;
+    height: 500px;
+    background: linear-gradient(180deg, #1a5c45 0%, #0d3d2e 100%);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid rgba(201,169,110,0.4);
+  }
+
+  .hero-foto-sim svg {
+    width: 200px;
+    height: 380px;
+    opacity: 0.15;
+  }
+
+  .hero-foto-sim::after {
+    content: '[ FOTO DR. LUCAS ]';
+    position: absolute;
+    bottom: 20px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(201,169,110,0.5);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 60px 80px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--dourado);
+  }
+
+  .hero-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--branco);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-titulo strong {
+    font-weight: 600;
+    color: var(--creme);
+    display: block;
+  }
+
+  .hero-linha {
+    width: 60px;
+    height: 2px;
+    background: var(--dourado);
+    margin: 24px 0;
+  }
+
+  .hero-subtitulo {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(242,237,228,0.85);
+    line-height: 1.8;
+    max-width: 380px;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--dourado);
+    color: var(--verde);
+    padding: 14px 32px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #d4b77a;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    color: var(--creme);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(242,237,228,0.3);
+    padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s;
+  }
+
+  .btn-secondary:hover {
+    border-bottom-color: var(--dourado);
+  }
+
+  .hero-oab {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 10px;
+    color: rgba(242,237,228,0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* ===== SERVIÇOS ===== */
+  .servicos {
+    background: var(--creme);
+    padding: 100px 60px;
+  }
+
+  .servicos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+  }
+
+  .servicos-titulo-area { flex: 1; }
+
+  .eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 12px;
+  }
+
+  .section-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--verde);
+    line-height: 1.15;
+  }
+
+  .section-titulo em {
+    font-style: italic;
+    color: var(--verde-medio);
+  }
+
+  .servicos-desc {
+    max-width: 320px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.8;
+    text-align: right;
+  }
+
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .servicos-grid + .servicos-grid {
+    margin-top: 2px;
+  }
+
+  .card {
+    background: var(--branco);
+    padding: 40px 36px;
+    position: relative;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+  }
+
+  .card:hover {
+    border-bottom-color: var(--dourado);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  }
+
+  .card.destaque {
+    background: var(--verde);
+    border-bottom-color: var(--dourado);
+  }
+
+  .card-numero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: rgba(13,61,46,0.08);
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    line-height: 1;
+  }
+
+  .card.destaque .card-numero { color: rgba(255,255,255,0.08); }
+
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  .card-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .card.destaque .card-titulo { color: var(--creme); }
+
+  .card-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .card.destaque .card-desc { color: rgba(242,237,228,0.75); }
+
+  /* ===== SOBRE ===== */
+  .sobre {
+    background: var(--verde);
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+    overflow: hidden;
+  }
+
+  .sobre-foto-side {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sobre-foto-sim {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    background: linear-gradient(135deg, #1a5c45 0%, #0a2e22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .sobre-foto-sim::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A96E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .sobre-foto-sim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
+
+  .sobre-foto-label {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: rgba(201,169,110,0.4);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sobre-content {
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sobre-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 16px;
+  }
+
+  .sobre-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--branco);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .sobre-nome strong {
+    font-weight: 600;
+    display: block;
+  }
+
+  .sobre-oab {
+    font-size: 11px;
+    color: var(--dourado);
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+
+  .sobre-linha {
+    width: 50px;
+    height: 1px;
+    background: var(--dourado);
+    margin-bottom: 28px;
+    opacity: 0.6;
+  }
+
+  .sobre-texto {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(242,237,228,0.8);
+    line-height: 2;
+    margin-bottom: 36px;
+    max-width: 420px;
+  }
+
+  .sobre-stats {
+    display: flex;
+    gap: 40px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(201,169,110,0.2);
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--dourado);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    color: rgba(242,237,228,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ===== DIFERENCIAIS ===== */
+  .diferenciais {
+    background: var(--cinza);
+    padding: 100px 60px;
+  }
+
+  .diferenciais-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border: 1px solid rgba(13,61,46,0.1);
+  }
+
+  .dif-item {
+    padding: 36px 28px;
+    border-right: 1px solid rgba(13,61,46,0.1);
+    text-align: center;
+    background: var(--branco);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .dif-item:last-child { border-right: none; }
+
+  .dif-item:hover {
+    background: rgba(13,61,46,0.03);
+  }
+
+  .dif-item-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    background: rgba(13,61,46,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dif-item-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--verde);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .dif-item-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .dif-item-desc {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.7;
+  }
+
+  /* ===== PROCESSO ===== */
+  .processo {
+    background: var(--verde);
+    padding: 100px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .processo-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 16px;
+  }
+
+  .processo-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--branco);
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+
+  .steps { display: flex; flex-direction: column; }
+
+  .step {
+    display: flex;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+    align-items: flex-start;
+  }
+
+  .step:first-child { border-top: 1px solid rgba(201,169,110,0.15); }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--dourado);
+    opacity: 0.7;
+    line-height: 1;
+    min-width: 44px;
+  }
+
+  .step-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--creme);
+    margin-bottom: 6px;
+  }
+
+  .step-desc {
+    font-size: 12px;
+    color: rgba(242,237,228,0.65);
+    line-height: 1.7;
+  }
+
+  .processo-foto-sim {
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(135deg, #1a5c45 0%, #0a2e22 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .processo-foto-sim::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(201,169,110,0.15);
+    border-radius: 50%;
+  }
+
+  .processo-foto-sim::after {
+    content: '[ FOTO DR. LUCAS — ESCRITÓRIO ]';
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(201,169,110,0.3);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .processo-foto-sim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* ===== CONTATO ===== */
+  .contato {
+    background: var(--creme);
+    padding: 100px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contato-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--verde);
+    line-height: 1.15;
+    margin-bottom: 32px;
+  }
+
+  .contato-titulo em { font-style: italic; color: var(--verde-medio); }
+
+  .info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(13,61,46,0.1);
+    align-items: flex-start;
+  }
+
+  .info-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(13,61,46,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .info-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--verde);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .info-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 3px;
+  }
+
+  .info-value {
+    font-size: 14px;
+    color: var(--verde);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 8px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .input-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .input {
+    border: 1px solid rgba(13,61,46,0.2);
+    padding: 13px 16px;
+    font-size: 13px;
+    color: var(--texto-escuro);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background: var(--branco);
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .input:focus {
+    border-color: var(--verde);
+  }
+
+  .textarea {
+    border: 1px solid rgba(13,61,46,0.2);
+    padding: 13px 16px;
+    font-size: 13px;
+    color: var(--texto-escuro);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background: var(--branco);
+    outline: none;
+    resize: none;
+    height: 120px;
+    transition: border-color 0.3s;
+  }
+
+  .textarea:focus {
+    border-color: var(--verde);
+  }
+
+  .btn-enviar {
+    background: var(--verde);
+    color: var(--creme);
+    border: none;
+    padding: 16px 36px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    align-self: flex-start;
+    transition: background 0.3s;
+  }
+
+  .btn-enviar:hover { background: var(--verde-medio); }
+
+  .btn-whats {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8px;
+    align-self: flex-start;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .btn-whats:hover { background: #22bf5b; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #081f17;
+    padding: 60px 60px 28px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+    margin-bottom: 28px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .footer-logo-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--branco);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .footer-logo-sub {
+    font-size: 8px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .footer-tagline {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+    max-width: 240px;
+    margin-bottom: 20px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(201,169,110,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+    text-decoration: none;
+  }
+
+  .social-icon:hover {
+    border-color: var(--dourado);
+    background: rgba(201,169,110,0.1);
+  }
+
+  .social-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: rgba(201,169,110,0.7);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .footer-col-title {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 20px;
+  }
+
+  .footer-col-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col-links li a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-col-links li a:hover { color: var(--dourado); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+  }
+
+  .footer-oab {
+    font-size: 10px;
+    color: rgba(201,169,110,0.4);
+    letter-spacing: 2px;
+  }
+
+  /* ===== WHATSAPP FAB ===== */
+  .whatsapp-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+  }
+
+  .whatsapp-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+  }
+
+  .whatsapp-fab svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .diferenciais-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .dif-item:nth-child(3) { border-right: none; }
+    .dif-item:nth-child(4),
+    .dif-item:nth-child(5) { border-top: 1px solid rgba(13,61,46,0.1); }
+  }
+
+  @media (max-width: 900px) {
+    .header { padding: 0 24px; }
+    .nav { display: none; }
+    .hamburger { display: flex; }
+
+    .nav.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--verde);
+      padding: 32px 24px;
+      gap: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    .nav.open a {
+      font-size: 14px;
+      padding: 8px 0;
+    }
+
+    .nav.open .nav-portal {
+      display: block !important;
+      color: var(--dourado);
+      border-top: 1px solid rgba(201,169,110,0.2);
+      padding-top: 16px;
+      margin-top: 8px;
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero-foto-area { display: none; }
+
+    .hero-content {
+      padding: 60px 24px 80px;
+    }
+
+    .hero-titulo { font-size: 38px; }
+    .hero-oab { left: 24px; bottom: 24px; }
+
+    .servicos { padding: 60px 24px; }
+    .servicos-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .servicos-desc { text-align: left; }
+    .servicos-grid { grid-template-columns: 1fr; }
+
+    .sobre { grid-template-columns: 1fr; }
+    .sobre-foto-side { min-height: 300px; }
+    .sobre-foto-sim { min-height: 300px; }
+    .sobre-content { padding: 48px 24px; }
+    .sobre-nome { font-size: 36px; }
+
+    .diferenciais { padding: 60px 24px; }
+    .diferenciais-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .dif-item:nth-child(2),
+    .dif-item:nth-child(4) { border-right: none; }
+    .dif-item:nth-child(3) { border-right: 1px solid rgba(13,61,46,0.1); }
+    .dif-item { border-bottom: 1px solid rgba(13,61,46,0.1); }
+
+    .processo {
+      grid-template-columns: 1fr;
+      padding: 60px 24px;
+      gap: 40px;
+    }
+
+    .contato {
+      grid-template-columns: 1fr;
+      padding: 60px 24px;
+      gap: 48px;
+    }
+
+    .footer { padding: 48px 24px 24px; }
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .diferenciais-grid { grid-template-columns: 1fr; }
+    .dif-item { border-right: none !important; }
+
+    .footer-top { grid-template-columns: 1fr; }
+
+    .hero-titulo { font-size: 32px; }
+    .section-titulo { font-size: 32px; }
+    .sobre-nome { font-size: 30px; }
+    .contato-titulo { font-size: 32px; }
+    .processo-titulo { font-size: 32px; }
+
+    .sobre-stats { flex-direction: column; gap: 20px; }
+
+    .btn-whats-header, .btn-portal-header { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="#inicio" class="logo">
+    <svg class="logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="8" x2="40" y2="72" stroke="#C9A96E" stroke-width="1.5"/>
+      <line x1="28" y1="28" x2="52" y2="28" stroke="#C9A96E" stroke-width="1.5"/>
+      <circle cx="40" cy="24" r="3" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <line x1="29" y1="28" x2="18" y2="36" stroke="#C9A96E" stroke-width="1"/>
+      <line x1="14" y1="36" x2="22" y2="36" stroke="#C9A96E" stroke-width="1"/>
+      <path d="M14 36 Q18 46 22 36" stroke="#C9A96E" stroke-width="1" fill="none"/>
+      <line x1="51" y1="28" x2="62" y2="36" stroke="#C9A96E" stroke-width="1"/>
+      <line x1="58" y1="36" x2="66" y2="36" stroke="#C9A96E" stroke-width="1"/>
+      <path d="M58 36 Q62 46 66 36" stroke="#C9A96E" stroke-width="1" fill="none"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-nome">Munhoz</span>
+      <span class="logo-sub">Advocacia</span>
+    </div>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#inicio" class="active">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Áreas de Atuação</a>
+    <a href="#contato">Contato</a>
+    <a href="https://granola.lucasmunhoz.adv.br" class="nav-portal" target="_blank" rel="noopener">Área do Cliente</a>
+  </nav>
+  <a href="https://granola.lucasmunhoz.adv.br" class="btn-portal-header" target="_blank" rel="noopener">Área do Cliente</a>
+  <a href="https://wa.me/5515991231001?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="btn-whats-header" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-foto-area">
+    <div class="hero-foto-sim">
+      <svg viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="45" rx="28" ry="32" stroke="white" stroke-width="1"/>
+        <path d="M15 200 C15 140 25 120 60 115 C95 120 105 140 105 200" stroke="white" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">Advocacia Empresarial &amp; Cível</div>
+    <h1 class="hero-titulo">
+      Soluções Jurídicas<br>
+      <strong>Estratégicas</strong>
+    </h1>
+    <div class="hero-linha"></div>
+    <p class="hero-subtitulo">
+      Para proteger o que você construiu. Assessoria personalizada em Direito Empresarial, Cível, Trabalhista e Antecipação de Recebíveis.
+    </p>
+    <div class="hero-cta-group">
+      <a href="https://wa.me/5515991231001?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="btn-primary" target="_blank" rel="noopener">
+        Agendar Consulta
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#servicos" class="btn-secondary">Nossas Áreas</a>
+    </div>
+    <div class="hero-oab">OAB/SP 432.128 — Sorocaba/SP</div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="servicos-header fade-up">
+    <div class="servicos-titulo-area">
+      <div class="eyebrow">Áreas de Atuação</div>
+      <h2 class="section-titulo">Como podemos<br><em>ajudar você</em></h2>
+    </div>
+    <p class="servicos-desc">Atuação estratégica e personalizada em todas as frentes do direito empresarial, cível e trabalhista.</p>
+  </div>
+  <div class="servicos-grid">
+    <div class="card fade-up">
+      <span class="card-numero">01</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#0D3D2E" stroke-width="1.2">
+        <rect x="6" y="4" width="24" height="28" rx="2"/><line x1="11" y1="12" x2="25" y2="12"/><line x1="11" y1="17" x2="25" y2="17"/><line x1="11" y1="22" x2="19" y2="22"/>
+      </svg>
+      <div class="card-titulo">Direito Empresarial</div>
+      <div class="card-desc">Assessoria em contratos, compliance, LGPD, gestão de riscos e estruturação societária para empresas.</div>
+    </div>
+    <div class="card destaque fade-up">
+      <span class="card-numero">02</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#C9A96E" stroke-width="1.2">
+        <circle cx="18" cy="18" r="12"/><line x1="18" y1="10" x2="18" y2="18"/><line x1="18" y1="18" x2="24" y2="22"/>
+      </svg>
+      <div class="card-titulo">Assessoria Mensal</div>
+      <div class="card-desc">Suporte jurídico contínuo com reuniões mensais, atendimento via WhatsApp e revisão de contratos.</div>
+    </div>
+    <div class="card fade-up">
+      <span class="card-numero">03</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#0D3D2E" stroke-width="1.2">
+        <path d="M18 4L8 10v10c0 6 4.5 11 10 12 5.5-1 10-6 10-12V10L18 4z"/>
+      </svg>
+      <div class="card-titulo">Direito Cível</div>
+      <div class="card-desc">Resolução de conflitos, responsabilidade civil, cobranças e proteção patrimonial.</div>
+    </div>
+  </div>
+  <div class="servicos-grid">
+    <div class="card fade-up">
+      <span class="card-numero">04</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#0D3D2E" stroke-width="1.2">
+        <circle cx="18" cy="12" r="6"/><path d="M8 30c0-5.5 4.5-10 10-10s10 4.5 10 10"/>
+      </svg>
+      <div class="card-titulo">Direito Trabalhista</div>
+      <div class="card-desc">Suporte em rescisões, acordos, ações judiciais e orientação preventiva para equipes.</div>
+    </div>
+    <div class="card fade-up">
+      <span class="card-numero">05</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#0D3D2E" stroke-width="1.2">
+        <path d="M6 18h4l4-10 4 20 4-12 4 6 4-4"/><line x1="6" y1="30" x2="30" y2="30"/>
+      </svg>
+      <div class="card-titulo">Antecipação de Recebíveis</div>
+      <div class="card-desc">Aproximamos você dos compradores ideais para antecipar créditos judiciais com agilidade.</div>
+    </div>
+    <div class="card fade-up">
+      <span class="card-numero">06</span>
+      <svg class="card-icon" viewBox="0 0 36 36" fill="none" stroke="#0D3D2E" stroke-width="1.2">
+        <rect x="4" y="10" width="28" height="16" rx="2"/><line x1="4" y1="16" x2="32" y2="16"/><circle cx="14" cy="22" r="2"/>
+      </svg>
+      <div class="card-titulo">Atuação Extrajudicial</div>
+      <div class="card-desc">Negociações estratégicas, Lei do Superendividamento, M&As e registro de marcas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="sobre-foto-side">
+    <div class="sobre-foto-sim">
+      <span class="sobre-foto-label">[ Foto Dr. Lucas — CIESP Sorocaba ]</span>
+    </div>
+  </div>
+  <div class="sobre-content fade-up">
+    <div class="sobre-eyebrow">Sobre o Advogado</div>
+    <div class="sobre-nome">Dr. Lucas<br><strong>Munhoz</strong></div>
+    <div class="sobre-oab">OAB/SP 432.128</div>
+    <div class="sobre-linha"></div>
+    <p class="sobre-texto">
+      A Munhoz Advocacia nasceu da convicção de que o direito deve ser acessível, estratégico e personalizado. Com foco no direito empresarial, cível e trabalhista, o escritório oferece soluções jurídicas que vão além do processo — pensamos junto com o cliente, antecipamos riscos e construímos parcerias de longo prazo.
+    </p>
+    <div class="sobre-stats">
+      <div>
+        <div class="stat-num" data-target="8">0</div>
+        <div class="stat-label">Anos de Experiência</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="200">0</div>
+        <div class="stat-label">Clientes Atendidos</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="98">0</div>
+        <div class="stat-label">Satisfação</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="diferenciais">
+  <div class="diferenciais-header fade-up">
+    <div class="eyebrow">Por que nos escolher</div>
+    <h2 class="section-titulo">Nossos diferenciais</h2>
+  </div>
+  <div class="diferenciais-grid">
+    <div class="dif-item fade-up">
+      <div class="dif-item-icon">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="dif-item-titulo">Estratégia Sob Medida</div>
+      <div class="dif-item-desc">Atendimento personalizado para cada demanda específica do cliente.</div>
+    </div>
+    <div class="dif-item fade-up">
+      <div class="dif-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="dif-item-titulo">Prevenção Total</div>
+      <div class="dif-item-desc">Foco na prevenção de riscos e proteção do patrimônio.</div>
+    </div>
+    <div class="dif-item fade-up">
+      <div class="dif-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="dif-item-titulo">Comunicação Clara</div>
+      <div class="dif-item-desc">Explicações transparentes em cada etapa do processo.</div>
+    </div>
+    <div class="dif-item fade-up">
+      <div class="dif-item-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="dif-item-titulo">Agilidade</div>
+      <div class="dif-item-desc">Soluções extrajudiciais rápidas sem abrir mão da qualidade.</div>
+    </div>
+    <div class="dif-item fade-up">
+      <div class="dif-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="dif-item-titulo">Ética &amp; Transparência</div>
+      <div class="dif-item-desc">Comprometimento ético absoluto com cada caso jurídico.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="processo">
+  <div class="fade-up">
+    <div class="processo-eyebrow">Como Funciona</div>
+    <h2 class="processo-titulo">Processo simples,<br>resultado garantido</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div>
+          <div class="step-titulo">Primeiro Contato</div>
+          <div class="step-desc">Inicie via WhatsApp (15) 99123-1001 ou pelo formulário. Agendaremos sua consulta.</div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div>
+          <div class="step-titulo">Análise Detalhada</div>
+          <div class="step-desc">O Dr. Lucas Munhoz analisa seu caso e apresenta todas as opções jurídicas disponíveis.</div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div>
+          <div class="step-titulo">Plano de Ação</div>
+          <div class="step-desc">Definimos a estratégia ideal e enviamos a proposta de honorários personalizada.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fade-up">
+    <div class="processo-foto-sim"></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="fade-up">
+    <div class="eyebrow">Fale Conosco</div>
+    <h2 class="contato-titulo">Agende sua<br><em>consulta</em></h2>
+    <ul class="info-list">
+      <li class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Endereço</div>
+          <div class="info-value">Av. Washington Luiz, 310, cj 96<br>Jardim Emília — Sorocaba/SP</div>
+        </div>
+      </li>
+      <li class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">WhatsApp</div>
+          <div class="info-value">(15) 99123-1001</div>
+        </div>
+      </li>
+      <li class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Horário</div>
+          <div class="info-value">Segunda a Sexta, 8h às 18h</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="fade-up">
+    <div class="form-titulo">Envie uma mensagem</div>
+    <form class="form" id="contactForm">
+      <div class="input-group">
+        <label class="input-label">Nome completo</label>
+        <input class="input" type="text" name="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="input-group">
+        <label class="input-label">E-mail</label>
+        <input class="input" type="email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="input-group">
+        <label class="input-label">Mensagem</label>
+        <textarea class="textarea" name="mensagem" placeholder="Descreva brevemente sua necessidade..." required></textarea>
+      </div>
+      <button class="btn-enviar" type="submit">Enviar Mensagem</button>
+      <a href="https://wa.me/5515991231001?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="btn-whats" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Falar pelo WhatsApp
+      </a>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 80 80" fill="none">
+          <line x1="40" y1="8" x2="40" y2="72" stroke="#C9A96E" stroke-width="1.5"/>
+          <line x1="28" y1="28" x2="52" y2="28" stroke="#C9A96E" stroke-width="1.5"/>
+          <circle cx="40" cy="24" r="3" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+          <line x1="29" y1="28" x2="18" y2="36" stroke="#C9A96E" stroke-width="1"/>
+          <line x1="14" y1="36" x2="22" y2="36" stroke="#C9A96E" stroke-width="1"/>
+          <path d="M14 36 Q18 46 22 36" stroke="#C9A96E" stroke-width="1" fill="none"/>
+          <line x1="51" y1="28" x2="62" y2="36" stroke="#C9A96E" stroke-width="1"/>
+          <line x1="58" y1="36" x2="66" y2="36" stroke="#C9A96E" stroke-width="1"/>
+          <path d="M58 36 Q62 46 66 36" stroke="#C9A96E" stroke-width="1" fill="none"/>
+        </svg>
+        <div>
+          <div class="footer-logo-nome">Munhoz</div>
+          <div class="footer-logo-sub">Advocacia</div>
+        </div>
+      </div>
+      <p class="footer-tagline">Assessoria jurídica estratégica em Sorocaba/SP para empresas e pessoas físicas.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navegação</div>
+      <ul class="footer-col-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre o Dr. Lucas</a></li>
+        <li><a href="#servicos">Áreas de Atuação</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://granola.lucasmunhoz.adv.br" target="_blank" rel="noopener">Área do Cliente</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Serviços</div>
+      <ul class="footer-col-links">
+        <li><a href="#servicos">Direito Empresarial</a></li>
+        <li><a href="#servicos">Direito Cível</a></li>
+        <li><a href="#servicos">Direito Trabalhista</a></li>
+        <li><a href="#servicos">Antecipação de Recebíveis</a></li>
+        <li><a href="#servicos">Assessoria Mensal</a></li>
+        <li><a href="#servicos">Atuação Extrajudicial</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contato</div>
+      <ul class="footer-col-links">
+        <li><a href="https://wa.me/5515991231001" target="_blank" rel="noopener">(15) 99123-1001</a></li>
+        <li><a href="#contato">Av. Washington Luiz, 310</a></li>
+        <li><a href="#contato">cj 96 — Sorocaba/SP</a></li>
+        <li><a href="#contato" style="margin-top:8px; display:block;">Seg–Sex: 8h às 18h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 Munhoz Advocacia. Todos os direitos reservados.</span>
+    <span class="footer-oab">OAB/SP 432.128</span>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/5515991231001?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+
+// Close menu on link click
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    nav.classList.remove('open');
+  });
+});
+
+// Header scroll shadow
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Active nav on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = nav.querySelectorAll('a');
+
+function updateActiveNav() {
+  const scrollY = window.scrollY + 120;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}
+window.addEventListener('scroll', updateActiveNav);
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Counter animation
+let countersAnimated = false;
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !countersAnimated) {
+      countersAnimated = true;
+      document.querySelectorAll('[data-target]').forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const suffix = target === 8 ? '+' : target === 200 ? '+' : '%';
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          counter.textContent = current + suffix;
+        }, 30);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.sobre-stats').forEach(el => statsObserver.observe(el));
+
+// Contact form - redirect to WhatsApp
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nome = e.target.nome.value;
+  const email = e.target.email.value;
+  const msg = e.target.mensagem.value;
+  const text = encodeURIComponent(`Olá, sou ${nome} (${email}). ${msg}`);
+  window.open(`https://wa.me/5515991231001?text=${text}`, '_blank');
+});
+</script>
+
+</body>
+</html>
